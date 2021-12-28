@@ -11,7 +11,7 @@
     "depends": ["barcodes", "stock"],
     "data": [
         "security/ir.model.access.csv",
-        "views/assets.xml",
+        # "views/assets.xml",
         "views/res_config_settings_views.xml",
         # "views/stock_inventory_views.xml",
         "views/stock_location_views.xml",
@@ -22,4 +22,12 @@
         "wizard/stock_barcodes_read_picking_views.xml",
     ],
     "installable": True,
+    'assets': {
+        'web.assets_backend': [
+            'stock_barcodes/static/src/js/stock_barcodes.js',
+            'stock_barcodes/static/src/js/basic_fields.js',
+            'stock_barcodes/static/src/css/stock.css',
+        ],
+
+    },
 }
